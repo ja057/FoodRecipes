@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-4FE0B6C6-C199-4325-9C52-1391E258EA41</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210202175856_foods.cs" />
+    <Compile Remove="Migrations\20210202175856_foods.Designer.cs" />
+    <Compile Remove="Migrations\20210202180040_foods.cs" />
+    <Compile Remove="Migrations\20210202180040_foods.Designer.cs" />
+    <Compile Remove="Migrations\20210202180653_foods.cs" />
+    <Compile Remove="Migrations\20210202180653_foods.Designer.cs" />
+    <Compile Remove="Migrations\20210203043656_foods.cs" />
+    <Compile Remove="Migrations\20210203043656_foods.Designer.cs" />
+    <Compile Remove="Migrations\20210203050441_foods.cs" />
+    <Compile Remove="Migrations\20210203050441_foods.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\recipephotos\" />
+    <Folder Include="wwwroot\blogphotos\" />
+  </ItemGroup>
+
+</Project>

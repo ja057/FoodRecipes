@@ -1,0 +1,20 @@
+﻿@model IEnumerable<FoodRecipes.Models.FoodRecipe>
+
+@{
+    ViewData["Title"] = "View Recipe";
+}
+
+<h1>View Recipe</h1>
+
+<div class="card-columns">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img class="card-img-top" src="~/recipephotos/@item.RecipeID@item.Extension" alt="Card image">
+            <div class="card-body">
+                <h5 class="card-title">@item.RecipeName In @item.PrepTime</h5>
+                <a class="btn btn-warning" asp-action="ViewRecipeID" asp-route-id="@item.RecipeID">View Food Recipe</a>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,36 @@
+﻿@model FoodRecipes.Models.FoodRecipe
+
+@{
+    ViewData["Title"] = "View Recipe";
+    var item = Model;
+}
+
+<h1>View Recipe</h1>
+<div class="card text-center" style="color:#000">
+    <div class="card-header">
+        Food Recipe (@Html.DisplayFor(model => model.FoodCategories.CategoryName))
+    </div>
+    <div class="card-body">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="~/recipephotos/@item.RecipeID@item.Extension" alt="Card image">
+                </div>
+            </div>
+        </div>
+        <h5 class="card-title"> @Html.DisplayNameFor(model => model.RecipeName), @Html.DisplayFor(model => model.PrepTime)</h5>
+        <h1>Recipe Ingredients</h1>
+        <p class="card-text">@Html.DisplayFor(model => model.Ingredients)</p>
+        <h1>Recipe Detail</h1>
+        <p class="card-text">@Html.DisplayFor(model => model.RecipeDetail)</p>
+        <h1>Recipe By</h1>
+        <p class="card-text">@Html.DisplayFor(model => model.RecipeBy)</p>
+
+    </div>
+    <div class="card-footer text-muted">
+        <a class="btn btn-primary" asp-area="" asp-controller="RecipeReviews" asp-action="Create">Add Reviews</a>
+        <a class="btn btn-primary" asp-action="ViewReviews" asp-route-id="@item.RecipeID">View Reviews</a>
+        
+    </div>
+</div>
+
